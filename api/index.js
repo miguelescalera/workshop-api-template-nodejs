@@ -105,9 +105,9 @@ router.post('/notification', (req, res) => {
 
         let options = {
             /** Ingresar en XXX la variable(url) para buscar una merchant_order (pista: ya la declaramos antes) */
-            uri: util.format(XXX, id),
+            uri: util.format(MP_MERCHANT_URL, id),
             /** Ingresar en XXX el metodo para buscar una merchant_order */
-            method: "XXX"
+            method: "GET"
         }
 
         request(options, function(err, response, body) {
@@ -123,7 +123,7 @@ router.post('/notification', (req, res) => {
         });
     }
     /** Ingresar en XXX la respuesta que debe darse al recibir una notificacion */
-    return res.sendStatus(XXX);
+    return res.sendStatus(200);
 });
 
 /**
